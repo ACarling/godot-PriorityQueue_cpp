@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MaxQueue" inherits="Object" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		A priority queue which will arrange items in descending order (highest out first).
+	</brief_description>
+	<description>
+	Variants added to the priority queue must have the property pqval which is a float.
+	Elements without pqval as a parameter will be sorted to the end of the list.
+	You can give elements pqval in two main ways:
+	[codeblocks]
+	[gdscript]
+	# wrap existing object in a dictionary.
+	var pq: MaxQueue = MaxQueue.new()
+	pq.push({"val": some object, "pqval": priority (float)})
+	
+	# use some object which has pqval as a member.
+	var pq: MaxQueue = MaxQueue.new()
+	pq.push(objectWithPqval.new())
+
+	[/gdscript]
+	[/codeblocks]
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="is_empty">
+			<return type="bool" />
+			<description>
+			Returns [code]true[/code] if the priority queue is empty.
+			</description>
+		</method>
+		<method name="pop">
+			<return type="Variant" />
+			<description>
+			Removes and returns the element at the top of the of the priority queue (element with highest pqval). Returns [code]null[/code] if priority queue is empty.
+			</description>
+		</method>
+		<method name="push">
+			<return type="void" />
+			<param index="0" name="item" type="Variant" />
+			<description>
+			Adds an element to the priority queue, ensure your variant has a pqval property.
+			</description>
+		</method>
+		<method name="size">
+			<return type="int" />
+			<description>
+			Returns number of elements in the priority queue.
+			</description>
+		</method>
+	</methods>
+</class>

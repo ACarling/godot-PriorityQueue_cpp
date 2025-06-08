@@ -1,6 +1,7 @@
 #include "register_types.h"
 
-#include "PriorityQueue.h"
+#include "MinQueue.h"
+#include "MaxQueue.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
