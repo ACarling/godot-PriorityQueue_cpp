@@ -3,24 +3,28 @@ GDExtension bindings for std::priority_queue using godot dictionaries as input.
 
 Can either wrap data in a dictionary containing a pqval key or use an object which has the pqval property 
 
+Install by downloading release zip file: https://github.com/ACarling/godot-PriorityQueue_cpp/releases/tag/1.0
+
+Open your project > AssetLib > import > select the zip file
+
 ```
-	var max: MaxQueue = MaxQueue.new()
-	pq.push({"pqval": 3})
-	pq.push({"pqval": 8})
-	pq.push({"pqval": 5})
+var max: MaxQueue = MaxQueue.new()
+pq.push({"pqval": 3})
+pq.push({"pqval": 8})
+pq.push({"pqval": 5})
 
-	while !max.is_empty():
-		print(max.pop().pqval)
-	
-	# -> 8, 5, 3
+while !max.is_empty():
+	print(max.pop().pqval)
 
-	var min: MinQueue = MinQueue.new()
-	min.push({"pqval": 3})
-	min.push({"pqval": 8})
-	min.push({"pqval": 5})
+# -> 8, 5, 3
 
-	while !min.is_empty():
-		print(min.pop().pqval)
-	
-	# -> 3, 5, 8
+var min: MinQueue = MinQueue.new()
+min.push({"pqval": 3})
+min.push({"pqval": 8})
+min.push({"pqval": 5})
+
+while !min.is_empty():
+	print(min.pop().pqval)
+
+# -> 3, 5, 8
 ```
