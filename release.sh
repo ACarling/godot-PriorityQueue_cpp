@@ -1,3 +1,3 @@
 scons platform=windows target=template_release
-mkdir -p bin
-cp ./demo/bin/ ./bin/
+mkdir -p build/addons
+cp -r ./demo/addons/PriorityQueue ./build/addons/PriorityQueue

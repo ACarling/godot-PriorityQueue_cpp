@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/addons/PriorityQueue/env python
 import os
 import sys
 
@@ -24,7 +24,7 @@ if env["target"] in ["editor", "template_debug"]:
 
 if env["platform"] == "macos":
     library = env.SharedLibrary(
-        "demo/bin/libpriorityqueue.{}.{}.framework/libpriorityqueue.{}.{}".format(
+        "demo/addons/PriorityQueue/libpriorityqueue.{}.{}.framework/libpriorityqueue.{}.{}".format(
             env["platform"], env["target"], env["platform"], env["target"]
         ),
         source=sources,
@@ -32,17 +32,17 @@ if env["platform"] == "macos":
 elif env["platform"] == "ios":
     if env["ios_simulator"]:
         library = env.StaticLibrary(
-            "demo/bin/libpriorityqueue.{}.{}.simulator.a".format(env["platform"], env["target"]),
+            "demo/addons/PriorityQueue/libpriorityqueue.{}.{}.simulator.a".format(env["platform"], env["target"]),
             source=sources,
         )
     else:
         library = env.StaticLibrary(
-            "demo/bin/libpriorityqueue.{}.{}.a".format(env["platform"], env["target"]),
+            "demo/addons/PriorityQueue/libpriorityqueue.{}.{}.a".format(env["platform"], env["target"]),
             source=sources,
         )
 else:
     library = env.SharedLibrary(
-        "demo/bin/libpriorityqueue{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+        "demo/addons/PriorityQueue/libpriorityqueue{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
         source=sources,
     )
 

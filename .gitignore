@@ -2,23 +2,23 @@
 *.gen.*
 .godot/
 
-bin/*
+build/*
 
 # Ignore library files but not the gdextension file
-demo/bin/*
-!demo/bin/android
-demo/bin/android/*
-!demo/bin/android/.gitkeep
-!demo/bin/linux
-demo/bin/linux/*
-!demo/bin/linux/.gitkeep
-!demo/bin/macos
-demo/bin/macos/*
-!demo/bin/macos/.gitkeep
-!demo/bin/windows
-demo/bin/windows/*
-!demo/bin/windows/.gitkeep
-!demo/bin/*.gdextension
+demo/addons/PriorityQueue/*
+!demo/addons/PriorityQueue/android
+demo/addons/PriorityQueue/android/*
+!demo/addons/PriorityQueue/android/.gitkeep
+!demo/addons/PriorityQueue/linux
+demo/addons/PriorityQueue/linux/*
+!demo/addons/PriorityQueue/linux/.gitkeep
+!demo/addons/PriorityQueue/macos
+demo/addons/PriorityQueue/macos/*
+!demo/addons/PriorityQueue/macos/.gitkeep
+!demo/addons/PriorityQueue/windows
+demo/addons/PriorityQueue/windows/*
+!demo/addons/PriorityQueue/windows/.gitkeep
+!demo/addons/PriorityQueue/*.gdextension
 .sconsign*.dblite
 
 # Ignore custom.py
@@ -30,7 +30,7 @@ compile_commands.json
 # Ignore files generated for documentation
 /src/gen
 
-# Binaries
+# addons/PriorityQueuearies
 *.o
 *.os
 *.so
